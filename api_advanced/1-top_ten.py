@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Queries the Reddit API for the first 10 hot posts of a subreddit."""
 import requests
+
+
 def top_ten(subreddit):
     """Prints the titles of the first 10 hot posts, OK if the request fails."""
     ggp_url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
