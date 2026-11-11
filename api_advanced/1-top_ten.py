@@ -1,7 +1,5 @@
-
 #!/usr/bin/python3
 """Module that queries the Reddit API for hot posts."""
-
 import requests
 
 
@@ -20,7 +18,7 @@ def top_ten(subreddit):
         )
 
         if response.status_code != 200:
-            print("OK", end="")
+            print("OK")
             return
 
         results = response.json().get("data", {}).get("children", [])
@@ -29,4 +27,4 @@ def top_ten(subreddit):
             print(post.get("data", {}).get("title"))
 
     except Exception:
-        print("OK", end="")
+        print("OK")
